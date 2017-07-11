@@ -1,0 +1,13 @@
+<html>
+<script>
+window.test = async () => {
+  try {
+    const text = await Promise.resolve(666);
+    document.body.textContent = String(text);
+  } catch (e) {
+    document.body.innerHTML = e;
+  }
+};
+</script>
+<body onload="test()"></body>
+</html>
